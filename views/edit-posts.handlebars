@@ -1,0 +1,34 @@
+<article>
+    <section class="flex-wrap">
+        <h2 class="flex-wrap-header">Edit Post</h2>
+        <form class="edit-post-form">
+            <div class="flex-wrap">
+                <input class="post-input-margin" name="post-title" type="text" value="{{post.title}}" />
+                <textarea name="post-text" type="text">{{post.post_text}}</textarea>
+            </div>
+            <div class="flex-wrap">
+                {{post.vote_count}} {{format_plural "point" post.vote_count}}
+                |
+                {{format_date post.created_at}}
+                |
+                <a href="/post/{{post.id}}">{{post.comments.length}}
+                    {{format_plural "comment" post.comments.length}}</a>
+            </div>
+            <div class="flex-wrap">
+                <button type="submit">Save post</button>
+                <button type="button" class="delete-post-btn">Delete post</button>
+            </div>
+        </form>
+    </section>
+</article>
+
+{{> comments post.comments}}
+
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+<script src="/javascript/upvote.js"></script>
+{{/if}}
+
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>
+<script src="/javascript/comment.js"></script>

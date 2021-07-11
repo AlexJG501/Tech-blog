@@ -1,0 +1,17 @@
+<article class="post">
+    <div class="post-contents">
+        <div class="title">
+            <h2><a href="/post/{{id}}">{{title}}</a></h2>
+        </div>
+            <p>{{post_text}}</p>
+        <div class="meta">
+            {{vote_count}} {{format_plural "point" vote_count}}
+            |
+            {{user.username}}
+            |
+            {{format_date created_at}}
+            |
+            {{comments.length}} {{format_plural "comment" comments.length}}
+        </div>
+    </div>
+</article>
