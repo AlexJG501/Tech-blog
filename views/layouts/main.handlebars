@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Tech Blog</title>
+  <title>Tech Blog</title>
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
@@ -17,16 +17,16 @@
 
 <body class="indigo lighten-5">
   <div class="navbar-fixed">
-    <nav class="indigo">
+    <nav class="is-info">
       <div class="nav-wrapper">
-        <a href="/" class="brand-logo hide-on-med-and-down">The Tech Blog</a>
+        <a href="/" class="brand-logo hide-on-med-and-down">Tech Blog</a>
         <a href="#" data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <li><a href="/">Home</a></li>
           <li><a href="/dashboard">Dashboard</a></li>
           <li>
             {{#if loggedIn}}
-              <a href="/login" id="logout">Logut</a>
+              <a href="/login" id="logout">Logout</a>
             {{ else }}
               <a href="/login">Login</a>
             {{/if}}
