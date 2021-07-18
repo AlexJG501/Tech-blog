@@ -1,4 +1,4 @@
-require('dotenv').config();
+const dotenv = require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const routes = require('./controllers/');
@@ -15,7 +15,7 @@ const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {
-  secret: process.env.SECRET,
+  secret: process.env.SECRET || 'superSecretSecret',
   cookie: { maxAge: 8 * 60 * 60 * 1000 },  // session expires after 8 hours
   resave: false,
   rolling: true,
